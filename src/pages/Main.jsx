@@ -4,7 +4,13 @@ import SideBar from '../components/SideBar'
 function Main() {
   return (
     <div>
-      <main><SideBar></SideBar></main>
+      <main><SideBar></SideBar>
+
+
+        <div className='Banner'></div>
+
+
+      </main>
     </div>
   )
 }

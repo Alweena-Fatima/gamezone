@@ -7,15 +7,30 @@ main {
   padding: 30px;
   border: 8px solid var(--bgColor);
   background: var(--bgColor);
-  box-shadow: 
+  box-shadow:
     -5px -5px 15px rgba(255, 255, 255, 0.15),
-     5px  5px 15px rgba(0, 0, 0, 0.35),
+    5px 5px 15px rgba(0, 0, 0, 0.35),
     inset -5px -5px 15px rgba(255, 255, 255, 0.15),
-    inset  5px  5px 15px rgba(0, 0, 0, 0.35);
+    inset 5px 5px 15px rgba(0, 0, 0, 0.35);
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
   overflow: hidden;
   transition: 0.5s;
+}
+
+
+.Banner {
+  width: 78%;
+  
+  height: 100%;
+  padding: 20px;
+  border: 1px solid rgba(253, 253, 253, 0.1);
+  border-radius: 20px;
+  background: var(--bgColor);
+  box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.15),
+    5px 5px 15px rgba(71, 84, 85, 0.35);
+
+  transition: 1s;
 }

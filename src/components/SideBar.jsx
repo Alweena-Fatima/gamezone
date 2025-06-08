@@ -6,12 +6,21 @@ function SideBar() {
     const [navData, setNavData] = useState(NavoptionList);// default : NavoptionList
     return (
         <div className='sidebar'>
-            <a href='#' className='logo'>
-                <i className="bi bi-dpad"></i>
-                <span className='logoName'>Arena
-                </span>
+            <div className='TOP'>
+                <a href='#' className='logo'>
+                    <i className="bi bi-dpad"></i>
+                    <span className='logoName'>Arena
+                    </span>
+
+                </a>
+                <a href='#' className='RightTop'>
+                    <i class="bi bi-sunset-fill"></i>
+                    <span className='logoName'>User
+                    </span>
+
+                </a>
                 
-            </a>
+            </div>
             <ul className='option'>
 
                 {
