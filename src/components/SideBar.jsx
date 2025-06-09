@@ -2,25 +2,31 @@ import React, { useState } from 'react'
 import './SideBar.css'
 import NavoptionList from '../data/NavoptionList';
 import Navoption from './Navoption';
-function SideBar() {
-    const [navData, setNavData] = useState(NavoptionList);// default : NavoptionList
+function SideBar({ DarkMode, setDarkMode }) {
+    const [navData, setNavData] = useState(NavoptionList); // keep this
+
+    const toggleMode = () => {
+        setDarkMode(!DarkMode); // use prop's setDarkMode
+    };
     return (
-        <div className='sidebar'>
-            <div className='TOP'>
+        <>
+        <div className={`TOP ${DarkMode ? 'dark' : 'light'}`}>
                 <a href='#' className='logo'>
                     <i className="bi bi-dpad"></i>
                     <span className='logoName'>Arena
                     </span>
 
                 </a>
-                <a href='#' className='RightTop'>
-                    <i class="bi bi-sunset-fill"></i>
+                <a href='#' className='RightTop' onClick={toggleMode}>
+                    <i className={`bi ${DarkMode ? 'bi-sun-fill' : 'bi-moon-fill'}`}></i>
                     <span className='logoName'>User
                     </span>
 
                 </a>
                 
             </div>
+        <div className={`sidebar ${DarkMode ? 'dark' : 'light'}`}>
+            
             <ul className='option'>
 
                 {
@@ -34,6 +40,7 @@ function SideBar() {
             <li className='Contact'><a href='#'> <i class="bi bi-file-person-fill"></i><span className='nameName'>Contact</span></a></li>
 
         </div>
+        </>
     )
 }
 

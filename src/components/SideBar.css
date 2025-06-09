@@ -1,5 +1,5 @@
 .sidebar {
-    width: 22%;
+    width: 20%;
     height: 100%;
     padding: 20px;
     border: 1px solid rgba(253, 253, 253, 0.1);
@@ -12,13 +12,14 @@
     transition: 1s;
 
 }
-
-.sidebar .TOP {
-    height: auto;
-    width: 90vw;
+.TOP {
+    height: 10%;
+    /* width: 100%; */
     transition: 1s;
-
-    position: relative;
+    position: absolute;
+    top: 50px;
+    right: 70px;
+    left: 70px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -43,7 +44,6 @@
         align-items: center;
         gap: 15px;
     }
-
     .RightTop {
         font-size: 1.2rem;
         letter-spacing: 1px;
@@ -57,17 +57,9 @@
         padding-right: 20px;
 
     }
-
-
-
 }
-
-.logo .dark {
-    color: rgb(0, 0, 0);
-}
-
 .sidebar .option {
-    margin-top: 30px;
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -96,9 +88,6 @@
             5px 5px 15px rgba(0, 0, 0, 0.35);
     }
 }
-
-
-
 .sidebar .Contact {
     list-style: none;
 
@@ -106,7 +95,7 @@
     bottom: 50px;
     padding: 10px 30px;
     gap: 20px;
-    width: 20%;
+    width: 18%;
 
     a {
         text-decoration: none;
@@ -134,3 +123,30 @@
 
 }
 
+/* Light Mode Variables (override default dark mode ones) */
+.light {
+    --bgColor: #5ff5e1;
+    --textColor: #1a1a1a;
+}
+
+.light .logo,
+.light .RightTop,
+.light .option li a,
+.light .Contact a {
+    color: var(--textColor);
+}
+
+.light .TOP,
+.light .sidebar
+
+ {
+    background: var(--bgColor);
+    box-shadow: -5px -5px 15px rgba(129, 129, 129, 0.4),
+                5px 5px 15px rgba(9, 8, 8, 0.3);
+}
+
+.light .option li a:hover,
+.light .Contact a:hover {
+    box-shadow: -5px -5px 15px rgba(158, 158, 158, 0.15),
+                 5px 5px 15px rgba(0, 0, 0, 0.15);
+}
