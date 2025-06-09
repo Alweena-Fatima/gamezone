@@ -107,7 +107,9 @@
 
 /* Collapsed mode styles */
 .collapsed .sidebar {
-    width: 10%;
+    width: 7%;
+   
+
 }
 
 .collapsed .sidebar .option .nameName,
@@ -115,7 +117,10 @@
 .collapsed .TOP .logo .logoName {
     display: none;
 }
-
+.collapsed .sidebar .option,
+.collapsed .sidebar .Contact {
+    padding-left: 2px;
+}
 /* Light Mode Theme */
 .light {
     --bgColor: #5ff5e1;
@@ -210,7 +215,8 @@
 
 @media (max-width: 450px) {
     .sidebar {
-        width: 20%;
+        width: 16%;
+        height: 100%;
     }
 
     .sidebar ul {

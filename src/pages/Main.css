@@ -15,14 +15,15 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
+  gap: 25px;
   overflow: hidden;
   transition: 0.5s;
 }
 @media (max-width: 450px) {
   main{
-    padding: 20px;
-    gap: 10px;
+    padding: 15px;
+    gap: 9px;
+    margin-bottom: 40px;
   }
 }
 
@@ -52,5 +53,5 @@ main {
 }
 
  .collapsed .Banner{
-  width: 90%;
+  width: 93%;
 }
