@@ -1,0 +1,68 @@
+[
+  {
+    "_id": 1,
+    "title": "League of Legends",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui.",
+    "category": "MOBA",
+    "rating": 3,
+    "price": 79.0,
+    "img": "/assets/games/lol-bg.jpeg",
+    "trailer": "https://www.youtube.com/embed/vzHrjOMfHPY",
+    "active": true
+  },
+  {
+    "_id": 2,
+    "title": "Mario Kart 8 Deluxe",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui.",
+    "category": "Racing",
+    "rating": 5,
+    "price": 52.56,
+    "img": "/assets/games/mario-bg.jpeg",
+    "trailer": "https://www.youtube.com/embed/tKlRN2YpxRE",
+    "active": false
+  },
+  {
+    "_id": 3,
+    "title": "God of War Ragnarok",
+    "description": "Embark on an epic and heartfelt journey as Kratos and Atreus struggle with holding on and letting go.",
+    "category": "Action",
+    "rating": 5,
+    "price": 89.99,
+    "img": "/assets/games/gowr-bg.jpeg",
+    "trailer": "https://www.youtube.com/embed/EE-4GvjKcfs",
+    "active": true
+  },
+  {
+    "_id": 4,
+    "title": "Minecraft",
+    "description": "Build, explore, and survive in a blocky, procedurally-generated 3D world with infinite possibilities.",
+    "category": "Sandbox",
+    "rating": 4,
+    "price": 26.95,
+    "img": "/assets/games/minecraft-bg.jpeg",
+    "trailer": "https://www.youtube.com/embed/MmB9b5njVbA",
+    "active": true
+  },
+  {
+    "_id": 5,
+    "title": "FIFA 23",
+    "description": "Experience the world’s game with realistic gameplay, licensed leagues, and career modes.",
+    "category": "Sports",
+    "rating": 4,
+    "price": 59.99,
+    "img": "/assets/games/fifa23-bg.jpeg",
+    "trailer": "https://www.youtube.com/embed/o3V-GvvzjE4",
+    "active": true
+  },
+  {
+    "_id": 6,
+    "title": "Elden Ring",
+    "description": "Explore a vast, fantastical world full of danger and discovery in this acclaimed RPG by FromSoftware.",
+    "category": "RPG",
+    "rating": 5,
+    "price": 69.99,
+    "img": "/assets/games/eldenring-bg.jpeg",
+    "trailer": "https://www.youtube.com/embed/E3Huy2cdih0",
+    "active": false
+  }
+]
