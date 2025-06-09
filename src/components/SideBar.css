@@ -1,5 +1,4 @@
 .sidebar {
-
     width: 20%;
     height: 100%;
     padding: 20px;
@@ -7,20 +6,15 @@
     border-radius: 20px;
     background: var(--bgColor);
     box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.15),
-        5px 5px 15px rgba(71, 84, 85, 0.35);
+                5px 5px 15px rgba(71, 84, 85, 0.35);
     display: flex;
     flex-direction: column;
-    transition: 1s;
     justify-content: flex-start;
-    height: 100%;
-    /* position: relative; for other positioning if needed */
-
+    transition: 1s;
 }
 
 .TOP {
     height: 10%;
-    /* width: 100%; */
-    transition: 1s;
     position: absolute;
     top: 50px;
     right: 70px;
@@ -35,148 +29,93 @@
     padding-bottom: 3px;
     background: var(--bgColor);
     box-shadow: -5px -5px 15px rgba(241, 236, 236, 0.15),
-        5px 5px 15px rgba(53, 53, 53, 0.35);
+                5px 5px 15px rgba(53, 53, 53, 0.35);
+}
 
-    .logo {
-        font-size: 2.2rem;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: aliceblue;
-        font-weight: 600;
-        user-select: none;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 15px;
+.TOP .logo {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: aliceblue;
+    font-weight: 600;
+    user-select: none;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+}
 
-        .filter {
-            font-size: x-large;
-            padding-left: 60px;
-        }
-    }
+.TOP .logo .filter {
+    font-size: x-large;
+    padding-left: 60px;
+}
 
-    .RightTop,
-    .mode {
-        font-size: 1.2rem;
-        letter-spacing: 1px;
-        color: aliceblue;
-
-        user-select: none;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 15px;
-        padding-right: 20px;
-
-    }
-    .fill{
-        color: aliceblue;
-         letter-spacing: 1px;
-        color: aliceblue;
-
-        user-select: none;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 15px;
-        padding-right: 20px;
-
-    }
-    
+.TOP .RightTop,
+.TOP .mode,
+.fill {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: aliceblue;
+    user-select: none;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding-right: 20px;
 }
 
 .sidebar .option {
-    /* padding-top: 50px; */
     margin-top: 80px;
     display: flex;
     flex-direction: column;
     list-style: none;
     gap: 15px;
+}
 
-    li a {
-        text-decoration: none;
-        color: aliceblue;
-        font-size: 1.1rem;
-        letter-spacing: 1px;
-        display: inline-flex;
-        /*used to create that 25 px gap between name and icon*/
-        align-items: center;
-        gap: 25px;
-        transition: 0.5s;
-        background: var(--bgColor);
-        border-radius: 20px;
-        padding: 10px 20px;
-        width: 100%;
-        transition: 0.5s;
-    }
+.sidebar .option li a,
+.sidebar .Contact li a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+    background: var(--bgColor);
+    border-radius: 20px;
+    padding: 10px 20px;
+    width: 100%;
+    transition: 0.5s;
+}
 
-    li a:hover,
-    li a:active {
-        box-shadow: -5px -5px 15px rgba(158, 77, 77, 0.15),
-            5px 5px 15px rgba(0, 0, 0, 0.35);
-    }
+.sidebar .option li a:hover,
+.sidebar .option li a:active,
+.sidebar .Contact li a:hover,
+.sidebar .Contact li a:active {
+    box-shadow: -5px -5px 15px rgba(158, 77, 77, 0.15),
+                5px 5px 15px rgba(0, 0, 0, 0.35);
 }
 
 .sidebar .Contact {
     margin-top: auto;
-    /* margin-top: auto tells the browser:
-“Take up all remaining vertical space above me.”
-So, .Contact will "push itself down" as far as possible, staying at 
-the bottom of the sidebar, without needing position: absolute or manual spacing.*/
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 15px;
-
-    li a {
-        text-decoration: none;
-        color: aliceblue;
-        font-size: 1.1rem;
-        letter-spacing: 1px;
-        display: inline-flex;
-        /*used to create that 25 px gap between name and icon*/
-        align-items: center;
-        gap: 25px;
-        transition: 0.5s;
-        background: var(--bgColor);
-        border-radius: 20px;
-        padding: 10px 20px;
-        width: 100%;
-        transition: 0.5s;
-    }
-
-    li a:hover,
-    li a:active {
-        box-shadow: -5px -5px 15px rgba(158, 77, 77, 0.15),
-            5px 5px 15px rgba(0, 0, 0, 0.35);
-    }
 }
-.sidebar .collapsed{
+
+/* Collapsed mode styles */
+.collapsed .sidebar {
     width: 10%;
-
-        ul {
-            /* padding-top: 50px; */
-            justify-content: center;
-            align-items: center;
-            padding-left: 0px;
-
-        }
-         .option .nameName {
-        display: none;
-    }
-
-     .Contact .nameName {
-        display: none;
-
-
-    }
-    
 }
 
+.collapsed .sidebar .option .nameName,
+.collapsed .sidebar .Contact .nameName,
+.collapsed .TOP .logo .logoName {
+    display: none;
+}
 
-
-
-/* Light Mode Variables (override default dark mode ones) */
+/* Light Mode Theme */
 .light {
     --bgColor: #5ff5e1;
     --textColor: #1a1a1a;
@@ -186,8 +125,8 @@ the bottom of the sidebar, without needing position: absolute or manual spacing.
 .light .RightTop,
 .light .RightTop .mode,
 .light .option li a,
-.light .Contact li a
- {
+.light .Contact li a,
+.light .fill {
     color: var(--textColor);
 }
 
@@ -195,43 +134,47 @@ the bottom of the sidebar, without needing position: absolute or manual spacing.
 .light .sidebar {
     background: var(--bgColor);
     box-shadow: -5px -5px 15px rgba(129, 129, 129, 0.4),
-        5px 5px 15px rgba(9, 8, 8, 0.3);
+                5px 5px 15px rgba(9, 8, 8, 0.3);
 }
 
 .light .option li a:hover {
     box-shadow: -5px -5px 15px rgba(158, 158, 158, 0.15),
-        5px 5px 15px rgba(0, 0, 0, 0.15);
-}
-.light  .fill {
-    color: var(--textColor);
+                5px 5px 15px rgba(0, 0, 0, 0.15);
 }
 
+/* === MEDIA QUERIES === */
 
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 22%;
+    }
+
+    .sidebar ul {
+        padding-left: 10px;
+        font-size: 1rem;
+    }
+
+    .sidebar .option li a,
+    .sidebar .Contact li a {
+        padding-left: 10px;
+        gap: 13px;
+    }
+}
 
 @media (max-width: 768px) {
     .sidebar {
         width: 20%;
-
-        ul {
-            padding-top: 50px;
-            justify-content: center;
-            align-items: center;
-            padding-left: 0px;
-
-        }
-
     }
 
-    .sidebar .option .nameName {
-        display: none;
+    .sidebar ul {
+        /* padding-top: 50px; */
+        justify-content: center;
+        align-items: center;
+        padding-left: 0;
     }
 
-    .sidebar .Contact .nameName {
-        display: none;
-
-
-    }
-
+    .sidebar .option .nameName,
+    .sidebar .Contact .nameName,
     .TOP .logo .filter {
         display: none;
     }
@@ -239,10 +182,10 @@ the bottom of the sidebar, without needing position: absolute or manual spacing.
     .TOP .logo {
         font-size: 1.5rem;
         gap: 5px;
+    }
 
-        i {
-            font-size: 1rem;
-        }
+    .TOP .logo i {
+        font-size: 2rem;
     }
 
     .TOP .RightTop,
@@ -250,32 +193,34 @@ the bottom of the sidebar, without needing position: absolute or manual spacing.
         font-size: 1rem;
         gap: 1px;
     }
+
+    /* Collapsed version at this size */
+    .collapsed .sidebar {
+        width: 20%;
+    }
+
+    .collapsed .TOP .logo {
+        font-size: 1.5rem;
+        gap: 5px;
+    }
+
+    
 }
 
 @media (max-width: 500px) {
     .sidebar {
         width: 15%;
-
-        ul {
-            padding-top: 50px;
-            justify-content: center;
-            align-items: center;
-            padding-left: 0px;
-
-        }
-
     }
 
-    .sidebar .option .nameName {
-        display: none;
+    .sidebar ul {
+        /* padding-top: 50px; */
+        justify-content: center;
+        align-items: center;
+        padding-left: 0;
     }
 
-    .sidebar .Contact .nameName {
-        display: none;
-
-
-    }
-
+    .sidebar .option .nameName,
+    .sidebar .Contact .nameName,
     .TOP .logo .filter {
         display: none;
     }
@@ -283,46 +228,38 @@ the bottom of the sidebar, without needing position: absolute or manual spacing.
     .TOP .logo {
         font-size: 1.2rem;
         gap: 5px;
-
-        i {
-            font-size: 1rem;
-        }
     }
+
+    .TOP .logo i {
+        font-size: 2rem;
+    }
+    
 
     .TOP .RightTop,
     .TOP .RightTop .mode {
         font-size: .9rem;
-        gap: 0px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .sidebar {
-        width: 22%;
-
-        ul {
-            /* padding-top: 50px; */
-            /* justify-content: center;
-            align-items: center; */
-            padding-left: 10px;
-            font-size: 1rem;
-
-
-
-        }
-
-        .option,
-        .Contact {
-            li a {
-                padding-left: 10px;
-                gap: 13px;
-            }
-        }
-
-
+        gap: 0;
     }
 
-    /* .TOP .logo .filter {
+    /* Collapsed version at this size */
+    .collapsed .sidebar {
+        width: 15%;
+    }
+/* 
+    .collapsed .sidebar .option .nameName,
+    .collapsed .sidebar .Contact .nameName,
+    .collapsed .TOP .logo .filter {
         display: none;
+    }
+
+    .collapsed .TOP .logo {
+        font-size: 1.2rem;
+        gap: 5px;
+    }
+
+    .collapsed .TOP .RightTop,
+    .collapsed .TOP .RightTop .mode {
+        font-size: .9rem;
+        gap: 0;
     } */
 }

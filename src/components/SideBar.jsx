@@ -5,14 +5,6 @@ import Navoption from './Navoption';
 function SideBar({ DarkMode, setDarkMode, hide, sethide }) {
     const [navData, setNavData] = useState(NavoptionList); // keep this
 
-    const toggleMode = () => {
-        setDarkMode(!DarkMode); // use prop's setDarkMode
-    };
-    const filterMode = () => {
-        sethide(!hide); // use prop's 
-    };
-
-
     return (
         <>
             <div className={`TOP ${DarkMode ? 'dark' : 'light'}`}>
@@ -21,7 +13,7 @@ function SideBar({ DarkMode, setDarkMode, hide, sethide }) {
                     <span className='logoName'>Arena
                     </span>
                     <div className="filter">
-                        <a href='#' className='fill' onClick={filterMode}>
+                        <a href='#' className='fill' onClick={sethide}>
                             <i className={`bi ${hide ? 'bi-toggle2-on' : 'bi-toggle2-off'}`}></i>
 
                         </a>
@@ -31,7 +23,7 @@ function SideBar({ DarkMode, setDarkMode, hide, sethide }) {
                 </a>
 
                 <a href='#' className='RightTop' >
-                    <a href='#' className='mode' onClick={toggleMode}>
+                    <a href='#' className='mode' onClick={setDarkMode}>
                         <i className={`bi ${DarkMode ? 'bi-sun-fill' : 'bi-moon-fill'}`}></i>
 
                     </a>
