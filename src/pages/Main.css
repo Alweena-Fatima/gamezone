@@ -19,6 +19,12 @@ main {
   overflow: hidden;
   transition: 0.5s;
 }
+@media (max-width: 450px) {
+  main{
+    padding: 20px;
+    gap: 10px;
+  }
+}
 
 .Banner {
   width: 80%;

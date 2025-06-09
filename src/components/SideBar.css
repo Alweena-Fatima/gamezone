@@ -208,9 +208,9 @@
     
 }
 
-@media (max-width: 500px) {
+@media (max-width: 450px) {
     .sidebar {
-        width: 15%;
+        width: 20%;
     }
 
     .sidebar ul {
@@ -233,6 +233,9 @@
 
     .TOP .logo i {
         font-size: 2rem;
+    }
+    .TOP .logo .logoName{
+        display: none;
     }
     
 
