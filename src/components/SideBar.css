@@ -70,6 +70,7 @@
     flex-direction: column;
     list-style: none;
     gap: 15px;
+    padding-top: 40px;
 }
 
 .sidebar .option li a,
