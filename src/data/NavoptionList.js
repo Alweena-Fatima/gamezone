@@ -27,6 +27,13 @@ const NavoptionList=[
         icon:'bi bi-cart-check',
         active:false,
     },
+    {
+        _id:5,
+        target:'contact',
+        name:'Contact',
+        icon:'bi bi-file-person-fill',
+        active:false,
+    }
     
 ];
 export default NavoptionList;

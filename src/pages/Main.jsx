@@ -4,12 +4,13 @@ import SideBar from '../components/SideBar';
 
 function Main() {
   const [DarkMode, setDarkMode] = useState(true);
+  const [hide, sethide] = useState(false);
 
   return (
-    <div className={DarkMode ? 'dark' : 'light'}>
+    <div className={`sidebar ${DarkMode ? 'dark' : 'light'} ${hide ? 'collapsed' : ''}`}>
       <main>
-        <SideBar DarkMode={DarkMode} setDarkMode={setDarkMode} />
-        <div className='Banner'></div>
+        <SideBar DarkMode={DarkMode} setDarkMode={setDarkMode} hide={hide} sethide={sethide}/>
+        <div className='Banner' hide={hide} sethide={sethide}></div>
       </main>
     </div>
   );

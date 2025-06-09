@@ -1,4 +1,5 @@
 .sidebar {
+
     width: 20%;
     height: 100%;
     padding: 20px;
@@ -10,8 +11,12 @@
     display: flex;
     flex-direction: column;
     transition: 1s;
+    justify-content: flex-start;
+    height: 100%;
+    /* position: relative; for other positioning if needed */
 
 }
+
 .TOP {
     height: 10%;
     /* width: 100%; */
@@ -43,8 +48,15 @@
         display: inline-flex;
         align-items: center;
         gap: 15px;
+
+        .filter {
+            font-size: x-large;
+            padding-left: 60px;
+        }
     }
-    .RightTop {
+
+    .RightTop,
+    .mode {
         font-size: 1.2rem;
         letter-spacing: 1px;
         color: aliceblue;
@@ -57,8 +69,24 @@
         padding-right: 20px;
 
     }
+    .fill{
+        color: aliceblue;
+         letter-spacing: 1px;
+        color: aliceblue;
+
+        user-select: none;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 15px;
+        padding-right: 20px;
+
+    }
+    
 }
+
 .sidebar .option {
+    /* padding-top: 50px; */
     margin-top: 80px;
     display: flex;
     flex-direction: column;
@@ -88,16 +116,19 @@
             5px 5px 15px rgba(0, 0, 0, 0.35);
     }
 }
+
 .sidebar .Contact {
+    margin-top: auto;
+    /* margin-top: auto tells the browser:
+“Take up all remaining vertical space above me.”
+So, .Contact will "push itself down" as far as possible, staying at 
+the bottom of the sidebar, without needing position: absolute or manual spacing.*/
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 
-    position: absolute;
-    bottom: 50px;
-    padding: 10px 30px;
-    gap: 20px;
-    width: 18%;
-
-    a {
+    li a {
         text-decoration: none;
         color: aliceblue;
         font-size: 1.1rem;
@@ -114,14 +145,36 @@
         transition: 0.5s;
     }
 
-    a:hover,
-    a:active {
+    li a:hover,
+    li a:active {
         box-shadow: -5px -5px 15px rgba(158, 77, 77, 0.15),
             5px 5px 15px rgba(0, 0, 0, 0.35);
     }
-
-
 }
+.sidebar .collapsed{
+    width: 10%;
+
+        ul {
+            /* padding-top: 50px; */
+            justify-content: center;
+            align-items: center;
+            padding-left: 0px;
+
+        }
+         .option .nameName {
+        display: none;
+    }
+
+     .Contact .nameName {
+        display: none;
+
+
+    }
+    
+}
+
+
+
 
 /* Light Mode Variables (override default dark mode ones) */
 .light {
@@ -131,22 +184,145 @@
 
 .light .logo,
 .light .RightTop,
+.light .RightTop .mode,
 .light .option li a,
-.light .Contact a {
+.light .Contact li a
+ {
     color: var(--textColor);
 }
 
 .light .TOP,
-.light .sidebar
-
- {
+.light .sidebar {
     background: var(--bgColor);
     box-shadow: -5px -5px 15px rgba(129, 129, 129, 0.4),
-                5px 5px 15px rgba(9, 8, 8, 0.3);
+        5px 5px 15px rgba(9, 8, 8, 0.3);
 }
 
-.light .option li a:hover,
-.light .Contact a:hover {
+.light .option li a:hover {
     box-shadow: -5px -5px 15px rgba(158, 158, 158, 0.15),
-                 5px 5px 15px rgba(0, 0, 0, 0.15);
+        5px 5px 15px rgba(0, 0, 0, 0.15);
+}
+.light  .fill {
+    color: var(--textColor);
+}
+
+
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 20%;
+
+        ul {
+            padding-top: 50px;
+            justify-content: center;
+            align-items: center;
+            padding-left: 0px;
+
+        }
+
+    }
+
+    .sidebar .option .nameName {
+        display: none;
+    }
+
+    .sidebar .Contact .nameName {
+        display: none;
+
+
+    }
+
+    .TOP .logo .filter {
+        display: none;
+    }
+
+    .TOP .logo {
+        font-size: 1.5rem;
+        gap: 5px;
+
+        i {
+            font-size: 1rem;
+        }
+    }
+
+    .TOP .RightTop,
+    .TOP .RightTop .mode {
+        font-size: 1rem;
+        gap: 1px;
+    }
+}
+
+@media (max-width: 500px) {
+    .sidebar {
+        width: 15%;
+
+        ul {
+            padding-top: 50px;
+            justify-content: center;
+            align-items: center;
+            padding-left: 0px;
+
+        }
+
+    }
+
+    .sidebar .option .nameName {
+        display: none;
+    }
+
+    .sidebar .Contact .nameName {
+        display: none;
+
+
+    }
+
+    .TOP .logo .filter {
+        display: none;
+    }
+
+    .TOP .logo {
+        font-size: 1.2rem;
+        gap: 5px;
+
+        i {
+            font-size: 1rem;
+        }
+    }
+
+    .TOP .RightTop,
+    .TOP .RightTop .mode {
+        font-size: .9rem;
+        gap: 0px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 22%;
+
+        ul {
+            /* padding-top: 50px; */
+            /* justify-content: center;
+            align-items: center; */
+            padding-left: 10px;
+            font-size: 1rem;
+
+
+
+        }
+
+        .option,
+        .Contact {
+            li a {
+                padding-left: 10px;
+                gap: 13px;
+            }
+        }
+
+
+    }
+
+    /* .TOP .logo .filter {
+        display: none;
+    } */
 }

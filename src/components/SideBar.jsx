@@ -2,44 +2,68 @@ import React, { useState } from 'react'
 import './SideBar.css'
 import NavoptionList from '../data/NavoptionList';
 import Navoption from './Navoption';
-function SideBar({ DarkMode, setDarkMode }) {
+function SideBar({ DarkMode, setDarkMode, hide, sethide }) {
     const [navData, setNavData] = useState(NavoptionList); // keep this
 
     const toggleMode = () => {
         setDarkMode(!DarkMode); // use prop's setDarkMode
     };
+    const filterMode = () => {
+        sethide(!hide); // use prop's 
+    };
+
+
     return (
         <>
-        <div className={`TOP ${DarkMode ? 'dark' : 'light'}`}>
+            <div className={`TOP ${DarkMode ? 'dark' : 'light'}`}>
                 <a href='#' className='logo'>
                     <i className="bi bi-dpad"></i>
                     <span className='logoName'>Arena
                     </span>
+                    <div className="filter">
+                        <a href='#' className='fill' onClick={filterMode}>
+                            <i className={`bi ${hide ? 'bi-toggle2-on' : 'bi-toggle2-off'}`}></i>
+
+                        </a>
+
+                    </div>
 
                 </a>
-                <a href='#' className='RightTop' onClick={toggleMode}>
-                    <i className={`bi ${DarkMode ? 'bi-sun-fill' : 'bi-moon-fill'}`}></i>
-                    <span className='logoName'>User
-                    </span>
+
+                <a href='#' className='RightTop' >
+                    <a href='#' className='mode' onClick={toggleMode}>
+                        <i className={`bi ${DarkMode ? 'bi-sun-fill' : 'bi-moon-fill'}`}></i>
+
+                    </a>
+
+                    <span className='logoName'><i class="bi bi-person"></i> Profile </span>
 
                 </a>
-                
+
+
+
             </div>
-        <div className={`sidebar ${DarkMode ? 'dark' : 'light'}`}>
-            
-            <ul className='option'>
-
-                {
-                    navData.map(item => (
-                        <Navoption key={item._id} item={item}></Navoption>
-                    ))
-                }
+           <div className={`sidebar ${DarkMode ? 'dark' : 'light'} ${hide ? 'collapsed' : ''}`}>
 
 
-            </ul>
-            <li className='Contact'><a href='#'> <i class="bi bi-file-person-fill"></i><span className='nameName'>Contact</span></a></li>
+                <ul className='option'>
+                    {
+                        navData.filter(item => item.name !== 'Contact')
+                            .map(item => <Navoption key={item._id} item={item} />)
+                    }
+                </ul>
 
-        </div>
+                <ul className='Contact'>
+                    {
+                        navData.filter(item => item.name === 'Contact')
+                            .map(item => <Navoption key={item._id} item={item} />)
+                    }
+                </ul>
+
+
+
+
+            </div>
         </>
     )
 }

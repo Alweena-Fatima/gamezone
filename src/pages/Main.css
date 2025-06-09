@@ -20,9 +20,8 @@ main {
   transition: 0.5s;
 }
 
-
 .Banner {
-  width: 78%;
+  width: 80%;
   
   height: 100%;
   padding: 20px;
@@ -44,4 +43,8 @@ main {
     background: var(--bgColor);
     box-shadow: -5px -5px 15px rgb(122, 119, 119),
                 5px 5px 15px rgba(43, 42, 42, 0.3);
+}
+
+ .collapsed .Banner{
+  width: 90%;
 }
