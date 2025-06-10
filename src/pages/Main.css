@@ -4,7 +4,8 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 30px;
+  padding: 25px;
+  padding-bottom: 15px;
   border: 8px solid var(--bgColor);
   background: var(--bgColor);
   box-shadow:
@@ -13,23 +14,17 @@ main {
     inset -5px -5px 15px rgba(255, 255, 255, 0.15),
     inset 5px 5px 15px rgba(0, 0, 0, 0.35);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
   overflow: hidden;
   transition: 0.5s;
 }
-@media (max-width: 450px) {
-  main{
-    padding: 15px;
-    gap: 9px;
-    margin-bottom: 40px;
-  }
-}
+
 
 .Banner {
-  width: 80%;
-  
+  width: 84%;
+
   height: 100%;
   padding: 20px;
   border: 1px solid rgba(253, 253, 253, 0.1);
@@ -39,19 +34,68 @@ main {
     5px 5px 15px rgba(71, 84, 85, 0.35);
 
   transition: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+
 /* Light Mode Variables (override default dark mode ones) */
 .light {
-    --bgColor: #f51212;
-    --textColor: #1a1a1a;
+  --bgColor: #f51212;
+  --textColor: #1a1a1a;
 }
 
-.light .Banner  {
-    background: var(--bgColor);
-    box-shadow: -5px -5px 15px rgb(122, 119, 119),
-                5px 5px 15px rgba(43, 42, 42, 0.3);
+.light .Banner {
+  background: var(--bgColor);
+  box-shadow: -5px -5px 15px rgb(122, 119, 119),
+    5px 5px 15px rgba(43, 42, 42, 0.3);
 }
 
- .collapsed .Banner{
+.collapsed .Banner {
   width: 93%;
+}
+
+section {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: ease-in-out 1s;
+  transform-origin: bottom;
+  z-index: 1000;
+}
+
+section::-webkit-scrollbar {
+  display: none;
+}
+
+section.active {
+  /* top: 120px; */
+  height: auto;
+  overflow-y: visible;
+  opacity: 1;
+}
+
+
+@media (max-width: 450px) {
+  main {
+    padding: 15px;
+    gap: 9px;
+    margin-bottom: 40px;
+  }
+
+  section.active {
+    top: 0px;
+    height: auto;
+    overflow-y: visible;
+    opacity: 1;
+   
+  }
+  .swiper{
+    display: none;
+  }
 }

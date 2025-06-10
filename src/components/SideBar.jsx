@@ -7,8 +7,9 @@ function SideBar({ DarkMode, setDarkMode, hide, sethide }) {
 
     return (
         <>
+        
             <div className={`TOP ${DarkMode ? 'dark' : 'light'}`}>
-                <a href='#' className='logo'>
+                <div  className='logo'>
                     <i className="bi bi-dpad"></i>
                     <span className='logoName'>Arena
                     </span>
@@ -20,9 +21,9 @@ function SideBar({ DarkMode, setDarkMode, hide, sethide }) {
 
                     </div>
 
-                </a>
+                </div>
 
-                <a href='#' className='RightTop' >
+                <div className='RightTop' >
                     <a href='#' className='mode' onClick={setDarkMode}>
                         <i className={`bi ${DarkMode ? 'bi-sun-fill' : 'bi-moon-fill'}`}></i>
 
@@ -30,7 +31,7 @@ function SideBar({ DarkMode, setDarkMode, hide, sethide }) {
 
                     <span className='logoName'><i class="bi bi-person"></i> Profile </span>
 
-                </a>
+                </div>
 
 
 

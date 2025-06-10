@@ -1,7 +1,8 @@
 .sidebar {
-    width: 20%;
+    z-index: 9;
+    width: 16%;
     height: 100%;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid rgba(253, 253, 253, 0.1);
     border-radius: 20px;
     background: var(--bgColor);
@@ -11,12 +12,19 @@
     flex-direction: column;
     justify-content: flex-start;
     transition: 1s;
+    justify-content: center;
+    align-items: center;
 }
+.sidebar ul {
+        padding-left: 10px;
+        font-size: 1rem;
+    }
 
 .TOP {
-    height: 10%;
+    z-index: 10;
+    height: 9%;
     position: absolute;
-    top: 50px;
+    top: 40px;
     right: 70px;
     left: 70px;
     display: flex;
@@ -26,7 +34,7 @@
     border-radius: 20px;
     padding-left: 20px;
     padding-top: 3px;
-    padding-bottom: 3px;
+    padding-bottom: 7px;
     background: var(--bgColor);
     box-shadow: -5px -5px 15px rgba(241, 236, 236, 0.15),
                 5px 5px 15px rgba(53, 53, 53, 0.35);
@@ -152,7 +160,7 @@
 
 @media (max-width: 1200px) {
     .sidebar {
-        width: 22%;
+        width: 20%;
     }
 
     .sidebar ul {
