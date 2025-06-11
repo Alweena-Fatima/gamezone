@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import './SideBar.css'
 import NavoptionList from '../data/NavoptionList';
 import Navoption from './Navoption';
-function SideBar({ DarkMode, hide }) {
+function SideBar({ DarkMode, hide ,sectionAvctive}) {
     const [navData, setNavData] = useState(NavoptionList); // keep this
-    const hancleNavOnclick = (id) => {
-        console.log(id)
+    const hancleNavOnclick = (id,target) => {
+        
         const newNavData = navData.map(nav => {
             nav.active = false;
             if (nav._id == id) {//if nav id matched to the id of what we have clicked make it active
@@ -14,6 +14,7 @@ function SideBar({ DarkMode, hide }) {
             return nav
         })
         setNavData(newNavData);
+        sectionAvctive(target);
 
     }
     return (

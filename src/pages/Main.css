@@ -55,31 +55,28 @@ main {
 .collapsed .Banner {
   width: 93%;
 }
-
 section {
+  display: none; /* 🛠 Hide inactive sections */
   overflow: hidden;
   position: relative;
   width: 100%;
   height: 100vh;
-  padding: 0 30px 0 30px;
-  bottom: 0;
+  padding: 0 30px;
   opacity: 0;
-  transition: ease-in-out 1s;
-  transform-origin: bottom;
-  z-index: 1000;
-  
-}
-
-section::-webkit-scrollbar {
-  display: none;
+  transform: translateY(20px); /* for slide effect */
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 section.active {
-  top: 100px;
+  display: block;         /* Show active section */
+  opacity: 1;
+  top: 120px;
+  transform: translateY(0); /* Slide into place */
   height: auto;
   overflow-y: visible;
-  opacity: 1;
 }
+
+
 
 @media (max-width: 450px) {
   section{

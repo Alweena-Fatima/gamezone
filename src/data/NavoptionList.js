@@ -8,14 +8,14 @@ const NavoptionList=[
     },
      {
         _id:2,
-        target:'category',
+        target:'genre',
         name:'Genre',
         icon:'bi bi-tag',
         active:false,
     },
      {
         _id:3,
-        target:'Wishlist',
+        target:'wishlist',
         name:'Wishlist',
         icon:'bi bi-bookmark-heart',
         active:false,

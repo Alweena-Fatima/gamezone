@@ -3,7 +3,7 @@ import './SideBar.css'
 function Navoption({item,navOnClick}) {
     return (
         <li>
-            <a href='#' className={`${item.active? 'active': undefined}`}onClick={()=>navOnClick(item._id)}> <i class={item.icon}></i> <span className='nameName'>{item.name}</span></a>
+            <a href='#' className={`${item.active? 'active': undefined}`}onClick={()=>navOnClick(item._id,item.target)}> <i class={item.icon}></i> <span className='nameName'>{item.name}</span></a>
         </li>
     )
 }

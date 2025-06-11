@@ -2,9 +2,10 @@ import React from 'react'
 import './Home.css'
 import Intro from '../components/Intro.jsx'
 import GameCard from '../components/GameCard.jsx'
-function Home({games ,DarkMode}) {
+function Home({games ,DarkMode,reference}) {
+  //ref is use to refer
   return (
-    <section id='home' className={`home active ${DarkMode ? 'dark' : 'light'}`}>
+    <section id='home' className={`home active ${DarkMode ? 'dark' : 'light'}`} ref={reference}>
       <div className="container-fluid">
         <div className="row">
           <Intro DarkMode={DarkMode}></Intro>
