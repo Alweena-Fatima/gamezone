@@ -64,12 +64,14 @@
 }
 
 .sidebar .option li a:hover,
-.sidebar .option li a:active,
+.sidebar .option li a.active,
 .sidebar .Contact li a:hover,
-.sidebar .Contact li a:active {
+.sidebar .Contact li a.active {
     box-shadow: -5px -5px 15px rgba(158, 77, 77, 0.15),
                 5px 5px 15px rgba(0, 0, 0, 0.35);
 }
+
+
 
 .sidebar .Contact {
     margin-top: auto;
