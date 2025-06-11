@@ -1,0 +1,9 @@
+section .home .sectionTitle{
+    text-transform: uppercase;
+}
+.home.light .sectionTitle {
+    color: black;
+}
+.home.dark .sectionTitle {
+    color: rgb(255, 255, 255);
+}

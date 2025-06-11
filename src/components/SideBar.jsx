@@ -2,42 +2,16 @@ import React, { useState } from 'react'
 import './SideBar.css'
 import NavoptionList from '../data/NavoptionList';
 import Navoption from './Navoption';
-function SideBar({ DarkMode, setDarkMode, hide, sethide }) {
+function SideBar({ DarkMode, hide}) {
     const [navData, setNavData] = useState(NavoptionList); // keep this
 
     return (
         <>
-        
-            <div className={`TOP ${DarkMode ? 'dark' : 'light'}`}>
-                <div  className='logo'>
+            <div className={`sidebar ${DarkMode ? 'dark' : 'light'} ${hide ? 'collapsed' : ''}`}>
+                <a href='#' className='logo'>
                     <i className="bi bi-dpad"></i>
                     <span className='logoName'>Arena
-                    </span>
-                    <div className="filter">
-                        <a href='#' className='fill' onClick={sethide}>
-                            <i className={`bi ${hide ? 'bi-toggle2-on' : 'bi-toggle2-off'}`}></i>
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div className='RightTop' >
-                    <a href='#' className='mode' onClick={setDarkMode}>
-                        <i className={`bi ${DarkMode ? 'bi-sun-fill' : 'bi-moon-fill'}`}></i>
-
-                    </a>
-
-                    <span className='logoName'><i class="bi bi-person"></i> Profile </span>
-
-                </div>
-
-
-
-            </div>
-           <div className={`sidebar ${DarkMode ? 'dark' : 'light'} ${hide ? 'collapsed' : ''}`}>
-
+                    </span></a>
 
                 <ul className='option'>
                     {

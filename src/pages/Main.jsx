@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Main.css';
 import SideBar from '../components/SideBar';
 import Home from './Home';
-import GameSection from '../components/GameSection';
+import TopBanner from './TopBanner';
 function Main() {
   const [DarkMode, setDarkMode] = useState(true);// [current state , handlefunction]
   const [hide, sethide] = useState(false);
@@ -38,21 +38,17 @@ function Main() {
   }, []);
   return (
     <div className={`sidebar ${DarkMode ? 'dark' : 'light'} ${hide ? 'collapsed' : ''}`}>
-   
+
       <main>
-      
-
         <SideBar DarkMode={DarkMode} setDarkMode={toggleMode} hide={hide} sethide={filterMode} />
-
         <div className='Banner'>
-        
-
+          <TopBanner DarkMode={DarkMode} setDarkMode={toggleMode} hide={hide} sethide={filterMode} ></TopBanner>
           <div className="container-fluid">
-            <Home games={games}>
-            
-            
-            </Home>
-          </div></div>
+              <Home games={games} DarkMode={DarkMode}></Home>
+          
+          </div>
+          
+        </div>
 
       </main>
     </div>

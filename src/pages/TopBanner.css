@@ -1,0 +1,78 @@
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    z-index: 1000 !important;
+    background:transparent;
+   box-shadow: -5px -5px 15px rgba(158, 158, 158, 0.15),
+        5px 5px 15px rgba(0, 0, 0, 0.15);
+        border-bottom-left-radius:20px ;
+        border-bottom-right-radius:20px ;
+    
+}
+.filtericon{
+    color: white;
+    font-size: 1.5rem;
+}
+.light .filtericon{
+    color:black;
+}
+.user{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+
+}
+.user .modeicon,
+.user .icon{
+    text-decoration: none;
+    position: relative;
+    color: white;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.light .modeicon,
+.light .icon{
+    color:black;
+}
+.collapsed .logo .logoName{
+    display: none;
+}
+
+/* === MEDIA QUERIES === */
+
+
+@media (max-width: 768px) {
+
+    .filtericon {
+        display: none;
+    }
+    
+  
+}
+
+@media (max-width: 450px) {
+    .filtericon {
+        display: none;
+    }
+    .modeicon {
+        font-size: .9rem;
+        gap: 0;
+    }
+    .collapsed .filtericon {
+        display: none;
+    }
+    .modeicon {
+        font-size: .9rem;
+        gap: 0;
+    }
+}
+

@@ -1,0 +1,146 @@
+.gameCard {
+    position: relative;
+    padding: 15px 10px;
+    margin-bottom: 25px;
+    width: auto;
+
+    box-shadow: -5px -5px 15px rgba(158, 158, 158, 0.15),
+        5px 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s ease; /* Apply transition to transform property */
+    border-radius: 20px;
+    background: transparent;
+}
+.gameCard:hover{
+    transform: translate3d(2px, 2px, 2px); /* Move card up slightly on hover */
+   
+}
+
+.img-fluid {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
+
+.gameCard .gameGenre .light {
+    color: rgb(0, 0, 0);
+}
+
+.gameCard .like {
+    position: absolute;
+    top: 14px;
+    right: 9px;
+    width: 40px;
+    height: 40px;
+    background: var(--bgColor);
+    padding: 5px;
+    border-radius: 0 0 0 30px;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.gameCard .like.active {
+    color: var(--second);
+}
+
+.light .like {
+    color: black;
+}
+
+.gameCard span {
+    color: aliceblue;
+}
+
+.gameCard span.light {
+    color: aliceblue;
+}
+
+/* Light Theme */
+.gameCard.light {
+
+    color: #000000;
+}
+
+/* Dark Theme */
+.gameCard.dark {
+
+    color: #f5f5f5;
+}
+
+/* Also update span and other nested elements to inherit or adjust */
+.gameCard.dark .gameGenre,
+.gameCard.dark .price,
+.gameCard.dark .gameName {
+    color: #f5f5f5;
+}
+
+
+.gameCard.light .price,
+.gameCard.light .gameName {
+    color: #000000;
+}
+
+.gameCard .Feature {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gameCard .gameGenre {
+    background: var(--second);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.gameCard .gameName {
+    margin-top: 10px;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px
+}
+
+.gameCard .price {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+        background: var(--second);
+        padding: 2px 5px;
+        border-radius: 10px;
+        font-weight: 400;
+        
+
+    }
+
+    .bagIcon {
+        position: relative;
+
+        background: var(--second);
+        padding: 2px 5px;
+        border-radius: 10px;
+
+        padding: 5px;
+        color: aliceblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+    }
+    .bagIcon:hover{
+        background: transparent;
+        color: black;
+       
+    }
+    
+}
+.dark .gameCard .price .bagIcon:hover{
+    background: transparent;
+        color: rgb(255, 255, 255);
+}

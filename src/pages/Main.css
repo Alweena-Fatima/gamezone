@@ -5,7 +5,7 @@ main {
   right: 0;
   bottom: 0;
   padding: 25px;
-  padding-bottom: 15px;
+
   border: 8px solid var(--bgColor);
   background: var(--bgColor);
   box-shadow:
@@ -19,25 +19,25 @@ main {
   gap: 20px;
   overflow: hidden;
   transition: 0.5s;
+  
 }
 
 
 .Banner {
-  width: 84%;
-
+  position: relative;
+  width: 82%;
   height: 100%;
-  padding: 20px;
   border: 1px solid rgba(253, 253, 253, 0.1);
   border-radius: 20px;
   background: var(--bgColor);
   box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.15),
     5px 5px 15px rgba(71, 84, 85, 0.35);
-
   transition: 1s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
+  overflow-y:scroll; /* allow vertical scroll */
+
 }
+
 
 
 /* Light Mode Variables (override default dark mode ones) */
@@ -60,13 +60,14 @@ section {
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 100%;
-  padding: 0;
+  height: 100vh;
+  padding: 0 30px 0 30px;
   bottom: 0;
   opacity: 0;
   transition: ease-in-out 1s;
   transform-origin: bottom;
   z-index: 1000;
+  
 }
 
 section::-webkit-scrollbar {
@@ -74,28 +75,19 @@ section::-webkit-scrollbar {
 }
 
 section.active {
-  /* top: 120px; */
+  top: 100px;
   height: auto;
   overflow-y: visible;
   opacity: 1;
 }
 
-
 @media (max-width: 450px) {
-  main {
-    padding: 15px;
-    gap: 9px;
-    margin-bottom: 40px;
+  section{
+    padding: 0 5px 0 10px;
   }
-
-  section.active {
-    top: 0px;
-    height: auto;
-    overflow-y: visible;
-    opacity: 1;
-   
-  }
-  .swiper{
-    display: none;
+  main{
+    padding: 10px;
+    gap: 10px;
   }
 }
+
